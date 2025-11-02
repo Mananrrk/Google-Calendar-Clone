@@ -54,4 +54,26 @@ Integration with backend services for storing events and adding reminder notific
 ---
 
 ## 📁 Project Structure
+```
+react-calendar-app/
+│
+├── public/ # Static files (index.html, favicon, etc.)
+├── src/
+│ ├── components/
+│ │ ├── Calendar.jsx # Main calendar UI and logic
+│ │ └── Modal.jsx # Event creation/edit modal
+│ ├── index.css # Styling for calendar layout
+│ ├── App.js # Main React entry
+│ └── index.js # Renders React app to DOM
+├── package.json # Project dependencies and scripts
+└── README.md # Project documentation
+```
+## 👨‍💻 AUTHOR
+
+**Manan Goyal**  
+🎓 B.Tech CSE | Bennett University  
+📧 Email: [mananmlzs@gmail.com](mailto:mananmlzs@gmail.com)  
+📱 Phone: +91-7895297561  
+🔗 [LinkedIn](https://www.linkedin.com/in/mananrrk/)  
+💻 [GitHub](https://github.com/Mananrrk) 
 
