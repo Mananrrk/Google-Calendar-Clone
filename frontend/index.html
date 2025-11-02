@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calendar Clone — Frontend (HTML)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="left">
+      <div class="logo">Calendar Clone</div>
+      <div style="font-size:13px;color:var(--muted)">My calendars</div>
+      <div style="margin-top:8px">
+        <label style="display:block;font-size:12px;color:var(--muted)">Personal</label>
+        <div style="margin-top:6px">
+          <span style="display:inline-block;width:10px;height:10px;background:#1a73e8;border-radius:3px;margin-right:8px"></span>
+          <span style="font-size:13px">My Calendar</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="toolbar">
+        <div class="controls">
+          <button id="todayBtn">Today</button>
+          <button id="prevBtn">‹</button>
+          <button id="nextBtn">›</button>
+          <div class="title" id="titleLabel">Month YYYY</div>
+        </div>
+
+        <div class="controls">
+          <button class="viewBtn" data-view="month">Month</button>
+          <button class="viewBtn active" data-view="week">Week</button>
+          <button class="viewBtn" data-view="day">Day</button>
+          <button id="newEventBtn" style="margin-left:10px" class="btn primary">Create</button>
+        </div>
+      </div>
+
+      <div class="calendar-wrap">
+        <!-- Month view -->
+        <section class="month" id="monthView" aria-hidden="true">
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px">
+            <div class="dow">Mon</div><div class="dow">Tue</div><div class="dow">Wed</div><div class="dow">Thu</div><div class="dow">Fri</div><div class="dow">Sat</div><div class="dow">Sun</div>
+          </div>
+          <div class="month-grid" id="monthGrid"></div>
+        </section>
+
+        <!-- Week view -->
+        <section class="week" id="weekView" aria-hidden="false" style="display:flex">
+          <div class="week-header" id="weekHeader"></div>
+          <div class="week-body" id="weekBody" style="width:100%"></div>
+        </section>
+
+        <!-- Day view (basic placeholder) -->
+        <section class="day" id="dayView" aria-hidden="true" style="display:none">
+          <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px">Day view coming soon</div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal template -->
+  <div id="modalRoot" style="display:none"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
